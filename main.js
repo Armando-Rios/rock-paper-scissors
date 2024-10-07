@@ -4,29 +4,34 @@ const $$ = selector => document.querySelectorAll(selector)
 const stringOptions = []
 
 const options = $$(".option")
+const resultText  = $('.text-container')
 
 function cpuChoice () {
-    return options[Math.floor(Math.random() * options.length)].id
+    const option = options[Math.floor(Math.random() * options.length)]
+    return [option.id, option.textContent] 
 }
 const game = $('.game')
 const result  = $('.message')
 const playGame = (player, cpu) => {
-    const resultText  = $('.text')
+    const text  = $('.text')
     const game = $('.game')
-    game.classList.add("showresult")
-    result.classList.remove("winner")
-    result.classList.remove("losser")
-    result.classList.remove("empate")
-    console.log(player,cpu);
-    const winner = win(player,cpu)
-    resultText.textContent = winner
-    winner === "Empate!" ? result.classList.add("empate") :
-    winner === "Ganaste!" ? result.classList.add("winner") : result.classList.add("losser")
+    const resultSelection = $$(".result-selection")
+    game.classList.add("hideGameOptions")
+    resultText.classList.remove("winner", "losser", "empate")
+    console.log(player.textContent,cpu[1]);
+    const winner = win(player.id ,cpu[0])
+    console.log(resultSelection)
+    resultSelection[0].textContent = player.textContent
+    resultSelection[1].textContent = cpu[1]
+    text.textContent = winner
+    winner === "Empate!" ? resultText.classList.add("empate") :
+    winner === "Ganaste!" ? resultText.classList.add("winner") : resultText.classList.add("losser")
+    result.classList.add('showResult')
 }
 
 options.forEach(option => {
     option.addEventListener("click", () => {
-        playGame(option.id, cpuChoice())
+        playGame(option, cpuChoice())
     })
 })
 
@@ -42,8 +47,7 @@ function win(player, cpu) {
 
 
 const reset = $(".reset").addEventListener('click', () => {
-    game.classList.remove("showresult")
-    result.classList.remove("winner")
-    result.classList.remove("losser")
-    result.classList.remove("empate")
+    game.classList.remove("hideGameOptions")
+    result.classList.remove('showResult')
+    resultText.classList.remove("winner", "losser", "empate")
 })
