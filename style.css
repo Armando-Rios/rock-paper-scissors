@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+    color-scheme: dark;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 50px;
+}
+
+.option {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    padding: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.option:hover {
+    transform: scale(120%);
+    transition: 0.2s;
+    border: 2px solid whitesmoke;
+    background: #043f3c;
+}
+
+.message {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 40px;
+    height: 140px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 4px solid white;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reset {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.winner {
+    display: flex;
+    background-color: #54e754;
+}
+
+.losser {
+    display: flex;
+    background: #e24141;
+}
+
+.empate {
+    display: flex;
+    background: #25acd4;
+}
+
+.showresult {
+    display: none;
+}
