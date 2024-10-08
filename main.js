@@ -21,11 +21,11 @@ const playGame = (player, cpu) => {
     console.log(player.textContent,cpu[1]);
     const winner = win(player.id ,cpu[0])
     console.log(resultSelection)
-    resultSelection[0].textContent = player.textContent
-    resultSelection[1].textContent = cpu[1]
+    resultSelection[0].innerText = player.textContent
+    resultSelection[1].innerText = cpu[1]
     text.textContent = winner
-    winner === "Empate!" ? resultText.classList.add("Draw!") :
-    winner === "Ganaste!" ? resultText.classList.add("winner") : resultText.classList.add("losser")
+    winner === "Draw!" ? resultText.classList.add("empate") :
+    winner === "You won!" ? resultText.classList.add("winner") : resultText.classList.add("losser")
     result.classList.add('showResult')
 }
 
@@ -42,7 +42,7 @@ function win(player, cpu) {
         scissors: 'paper',
         paper: 'rock'
     };
-    return winningCombinations[player] === cpu ? "You won!" : "You lost";
+    return winningCombinations[player] === cpu ? "You won!" : "You lost!";
 }
 
 
