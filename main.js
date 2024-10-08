@@ -24,7 +24,7 @@ const playGame = (player, cpu) => {
     resultSelection[0].textContent = player.textContent
     resultSelection[1].textContent = cpu[1]
     text.textContent = winner
-    winner === "Empate!" ? resultText.classList.add("empate") :
+    winner === "Empate!" ? resultText.classList.add("Draw!") :
     winner === "Ganaste!" ? resultText.classList.add("winner") : resultText.classList.add("losser")
     result.classList.add('showResult')
 }
@@ -36,13 +36,13 @@ options.forEach(option => {
 })
 
 function win(player, cpu) {
-    if (player === cpu) return "Empate!";
+    if (player === cpu) return "Draw!";
     const winningCombinations = {
         rock: 'scissors',
         scissors: 'paper',
         paper: 'rock'
     };
-    return winningCombinations[player] === cpu ? "Ganaste!" : "Perdiste!";
+    return winningCombinations[player] === cpu ? "You won!" : "You lost";
 }
 
 
