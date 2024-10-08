@@ -1,132 +1,133 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, sans-serif;
-    color-scheme: dark;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  color-scheme: dark;
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
 }
 
 header {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
 footer {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 #options {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  gap: 50px;
 }
 
 .option {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    padding: 20px;
-    transition: 0.2s;
-    cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  padding: 20px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .option:hover {
-    transform: scale(120%);
-    transition: 0.2s;
-    border: 2px solid whitesmoke;
-    background: #043f3c;
+  transform: scale(120%);
+  transition: 0.2s;
+  border: 2px solid whitesmoke;
+  background: #043f3c;
 }
 
 .message {
-    position: absolute;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 40px;
-    height: 300px;
-    width: 460px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    flex-direction: column;
-    gap: 20px;
+  position: absolute;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 40px;
+  height: 300px;
+  width: 460px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .result-selection-container {
-    display: flex;
-    padding: 10px;
-    font-size: 100px;
-    gap: 50px;
-    width: 460px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 10px;
+  font-size: 100px;
+  gap: 50px;
+  width: 460px;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .reset {
-    padding: 10px;
-    border-radius: 10px;
-    margin: auto;
+  padding: 14px;
+  border-radius: 10px;
+  margin: auto;
+  border: 2px solid white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .text-container {
-    border: 4px solid white;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    border-radius: 20px;
-    width: 350px;
-    gap: 10px;
+  border: 4px solid white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  border-radius: 20px;
+  width: 350px;
+  gap: 10px;
 }
 
 .winner {
-    background-color: #54e754;
-
+  background-color: #54e754;
 }
 
 .losser {
-    background-color: #e24141;
+  background-color: #e24141;
 }
 
 .empate {
-    background-color: #25acd4;
+  background-color: #25acd4;
 }
 
 .hideGameOptions {
-    display: none;
+  display: none;
 }
 
 .showResult {
-    display: flex;
+  display: flex;
 }
